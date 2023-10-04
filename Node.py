@@ -21,7 +21,7 @@ class Node:
         else:
             return "("+" ".join((n.as_scheme() if isinstance(n,Node) else n) for n in self.children)+")"
 
-    def terminals(self,sep=""):
+    def terminals(self,sep=" "):
         if len(self.children) == 0:
             return self.nt
         else:
